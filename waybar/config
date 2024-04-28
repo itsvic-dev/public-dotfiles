@@ -1,0 +1,30 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "wireplumber",
+    "bluetooth",
+    "clock",
+    "privacy"
+  ],
+  "wireplumber": {
+    "format": "{icon}   {volume}%",
+    "format-muted": "",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "on-click": "pavucontrol"
+  },
+  "bluetooth": {
+    "format": "  {status}",
+    "on-click": "blueman-manager"
+  }
+}

@@ -1,0 +1,73 @@
+@define-color surface #201a1b;
+@define-color on-surface #ebe0e1;
+@define-color surface-variant #514347;
+@define-color on-surface-variant #d5c2c6;
+@define-color secondary-container #5b3f47;
+@define-color on-secondary-container #ffd9e2;
+@define-color secondary #e3bdc6;
+@define-color on-secondary #422931;
+@define-color primary-container #8e004a;
+@define-color on-primary-container #ffd9e2;
+@define-color primary #ffb1c8;
+@define-color on-primary #650033;
+
+window#waybar > box {
+  background-color: @surface;
+  color: @on-surface;
+  padding: 4px 16px 4px 4px;
+}
+
+#workspaces button {
+  transition-property: background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  border-radius: 8px;
+  margin-right: 4px;
+  background-color: @secondary-container;
+  color: @on-secondary-container;
+  min-width: 15px;
+}
+
+#workspaces button:hover:not(.active) {
+  background-color: @secondary;
+  color: @on-secondary;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @on-primary;
+}
+
+#clock {
+  margin-left: 16px;
+  font-weight: 800;
+}
+
+#bluetooth {
+  padding: 0px 16px;
+  margin-left: 8px;
+  border-radius: 9999px;
+  background-color: @surface-variant;
+  color: @on-surface-variant;
+  transition-property: background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+#bluetooth.connected {
+  background-color: @secondary-container;
+  color: @on-secondary-container;
+}
+
+#wireplumber {
+  padding: 0px 16px;
+  margin-left: 8px;
+  border-radius: 9999px;
+  background-color: @surface-variant;
+  color: @on-surface-variant;
+}
+
+#tray > * > image {
+  margin-left: 6px;
+  margin-right: 8px;
+}
